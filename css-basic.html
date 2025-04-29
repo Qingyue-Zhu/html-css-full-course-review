@@ -1,0 +1,89 @@
+<style>
+  /* 
+  button is CSS Selector
+  button {
+  } 
+  */
+  .subscribe-button {
+    background-color: rgb(200, 0, 0);
+    color: white;
+    border: none;
+    height: 36px;
+    width: 105px;
+    border-radius: 2px;
+    cursor: pointer;
+    /* margin: add space outside of the box */
+    margin-right: 8px;
+    /* padding: add space inside the box */
+    padding-left: 15px;
+    padding-top: 20px;
+    /* add transition to change smoothly, transition: property time */
+    /* transition: opacity 1s; means change opacity in 1s */
+    transition: opacity 0.15s;
+    vertical-align: top;
+  }
+
+  /* :hover pseudo-class */
+  .subscribe-button:hover {
+    /* opacity is something like transparency, value: 0~1 */
+    opacity: 0.8;
+  }
+
+  /* active style when clicking the button */
+  .subscribe-button:active {
+    opacity: 0.4;
+  }
+
+  .join-button {
+    /* #1d9bf0 is hex, one measurement of color, like rgb, rgba */
+    background-color: #fff;
+    border-color: blue;
+    border-style: solid;
+    border-width: 1px;
+    color: blue;
+    border-radius: 2px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 16px;
+    padding-right: 16px;
+    cursor: pointer;
+    transition: background-color 1s,
+    color 1s;
+  }
+
+  .join-button:hover {
+    background-color: blue;
+    color: white;
+  }
+
+  .join-button:active {
+    opacity: 0.7;
+  }
+
+  .tweet-button {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 18px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    vertical-align: top;
+    transition: box-shadow 0.15s;
+  }
+
+  .tweet-button:hover {
+    /* box-shadow: horizontal position (to right), vertical position (to down), blur, color;*/
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+
+  }
+</style>
+
+<button class="subscribe-button">SUBSCRIBE</button>
+<button class="join-button">JOIN my channel</button>
+<button class="tweet-button">Tweet ME</button>
