@@ -20,17 +20,47 @@
       /* object-fit: contain; */
       /* object-position: top;
       object-position: bottom; */
+      display: block;
     }
 
     .search-bar {
       font-size: 20px;
       margin-left: 12px;
     }
+
+    .video-title {
+      width: 300px;
+    }
+
+    /* .video-author {
+      display: inline-block;
+    }
+
+    .video-stats {
+      display: inline-block;
+    } */
   </style>
 </head>
 <body>
-  <img class="thumbnail"  src="thumbnail/thumbnail-1.webp">
+  <!-- Block elements: Occupies entire line width, creates line breaks before and after, can set width/height and all margins.
+   Inline-block elements: Displays in same line as text, can set width/height and all margins, doesn't create line breaks. 
+   Inline elements: Displays in same line as text, cannot set width/height, only horizontal margins apply, doesn't create line breaks. -->
+
+  <!-- img & imput: inline-block element -->
   <input class="search-bar" type="text" placeholder="Search">
+  <img class="thumbnail"  src="thumbnail/thumbnail-1.webp">
   <!-- <input type="checkbox"> -->
+
+  <!-- p is block element -->
+  <!-- strong is inline element -->
+  <p class="video-title">
+    Talking Tech and AI with <strong>Google CEO</strong> Sundar Pichai!
+  </p>
+  <p class="video-author">
+    Marques Brownlee
+  </p>
+  <p class="video-stats">
+    3.4M views &#183; 6 months ago
+  </p>
 </body>
 </html>
