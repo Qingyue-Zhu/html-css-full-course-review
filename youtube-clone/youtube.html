@@ -24,8 +24,7 @@
     }
 
     .search-bar {
-      font-size: 20px;
-      margin-left: 12px;
+      display: block;
     }
 
     .video-title {
@@ -39,21 +38,28 @@
     .video-stats {
       display: inline-block;
     } */
+
+    .video-preview {
+      width: 300px;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 15px;
+    }
   </style>
 </head>
 <body>
-  <!-- Block elements: Occupies entire line width, creates line breaks before and after, can set width/height and all margins.
+  <!-- Block elements: Occupies entire line width in the container, creates line breaks before and after, can set width/height and all margins.
    Inline-block elements: Displays in same line as text, can set width/height and all margins, doesn't create line breaks. 
    Inline elements: Displays in same line as text, cannot set width/height, only horizontal margins apply, doesn't create line breaks. -->
 
   <!-- img & imput: inline-block element -->
   <input class="search-bar" type="text" placeholder="Search">
-  <img class="thumbnail"  src="thumbnail/thumbnail-1.webp">
+  <!-- <img class="thumbnail"  src="thumbnail/thumbnail-1.webp"> -->
   <!-- <input type="checkbox"> -->
 
   <!-- p is block element -->
   <!-- strong is inline element -->
-  <p class="video-title">
+  <!-- <p class="video-title">
     Talking Tech and AI with <strong>Google CEO</strong> Sundar Pichai!
   </p>
   <p class="video-author">
@@ -61,6 +67,33 @@
   </p>
   <p class="video-stats">
     3.4M views &#183; 6 months ago
-  </p>
+  </p> -->
+
+  <!-- <div></div> is just a box (container), it is a block element-->
+   <div class="video-preview">
+    <img class="thumbnail"  src="thumbnail/thumbnail-1.webp">
+    <p class="video-title">
+      Talking Tech and AI with <strong>Google CEO</strong> Sundar Pichai!
+    </p>
+    <p class="video-author">
+      Marques Brownlee
+    </p>
+    <p class="video-stats">
+      3.4M views &#183; 6 months ago
+    </p>
+   </div>
+
+   <div class="video-preview">
+    <img class="thumbnail"  src="thumbnail/thumbnail-2.webp">
+    <p class="video-title">
+      Try Not To Laugh Challenge #9
+    </p>
+    <p class="video-author">
+      Markiplier
+    </p>
+    <p class="video-stats">
+      19M views &#183; 4 years ago
+    </p>
+   </div>
 </body>
 </html>
