@@ -1,0 +1,56 @@
+.thumbnail {
+  width: 100%;
+  /* Object-fit: cover makes images or videos fill their container 
+  while maintaining aspect ratio. It crops the media if necessary
+   to ensure no empty space remains, similar to background-size: cover. */
+  /* object-fit: cover; */
+  /* Object-position: right aligns the visible portion of a cropped image or video to the right side of its container.
+   It determines which part remains visible when object-fit crops the content. */
+  /* object-position: right; */
+  /* Object-fit: contain scales an image or video to fit entirely within its container 
+  while maintaining aspect ratio. It ensures the complete media is visible,
+   potentially leaving empty space on the sides or top/bottom. */
+  /* object-fit: contain; */
+  /* object-position: top;
+  object-position: bottom; */
+}
+
+.video-title {
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 12px;
+}
+
+.video-author,
+.video-stats {
+  /* display: inline-block; */
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
+
+.video-author {
+  margin-bottom: 4px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+}
+
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+.profile-pic {
+  width: 40px;
+  border-radius: 50px;
+}
+
+.thumbnail-row {
+  margin-bottom: 12px;
+}

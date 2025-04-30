@@ -1,96 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Youtube.com Clone</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube.com Clone</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-  <style>
-    /* Arial is font stack. Set Arial as backup style for Reboto font */
-    p {
-      font-family: "Roboto", Arial;
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-    .thumbnail {
-      width: 100%;
-      /* Object-fit: cover makes images or videos fill their container 
-      while maintaining aspect ratio. It crops the media if necessary
-       to ensure no empty space remains, similar to background-size: cover. */
-      /* object-fit: cover; */
-      /* Object-position: right aligns the visible portion of a cropped image or video to the right side of its container.
-       It determines which part remains visible when object-fit crops the content. */
-      /* object-position: right; */
-      /* Object-fit: contain scales an image or video to fit entirely within its container 
-      while maintaining aspect ratio. It ensures the complete media is visible,
-       potentially leaving empty space on the sides or top/bottom. */
-      /* object-fit: contain; */
-      /* object-position: top;
-      object-position: bottom; */
-    }
-
-    .search-bar {
-      display: block;
-    }
-
-    .video-title {
-      margin-top: 0;
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 20px;
-      margin-bottom: 12px;
-    }
-
-    .video-author,
-    .video-stats {
-      /* display: inline-block; */
-      font-size: 12px;
-      color: rgb(96, 96, 96);
-    }
-
-    .video-author {
-      margin-bottom: 4px;
-    }
-
-    .video-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      column-gap: 16px;
-      row-gap: 40px;
-    }
-
-    .video-info-grid {
-      display: grid;
-      grid-template-columns: 50px 1fr;
-    }
-
-    .profile-pic {
-      width: 40px;
-      border-radius: 50px;
-    }
-
-    .thumbnail-row {
-      margin-bottom: 12px;
-    }
-  </style>
-</head>
-<body>
-  <!-- Block elements: Occupies entire line width in the container, creates line breaks before and after, can set width/height and all margins.
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/video.css">
+  </head>
+  <body>
+    <!-- Block elements: Occupies entire line width in the container, creates line breaks before and after, can set width/height and all margins.
    Inline-block elements: Displays in same line as text, can set width/height and all margins, doesn't create line breaks. 
    Inline elements: Displays in same line as text, cannot set width/height, only horizontal margins apply, doesn't create line breaks. -->
 
-  <!-- img & imput: inline-block element -->
-  <input class="search-bar" type="text" placeholder="Search">
-  <!-- <img class="thumbnail"  src="thumbnail/thumbnail-1.webp"> -->
-  <!-- <input type="checkbox"> -->
+    <!-- img & imput: inline-block element -->
+    <div class="header">
+      <div class="left-section">left section</div>
+      <div class="middle-section">
+        <input class="search-bar" type="text" placeholder="Search">
+      </div>
+      <div class="right-section">right section</div>
+    </div>
+    <!-- <img class="thumbnail"  src="thumbnail/thumbnail-1.webp"> -->
+    <!-- <input type="checkbox"> -->
 
-  <!-- p is block element -->
-  <!-- strong is inline element -->
-  <!-- <p class="video-title">
+    <!-- p is block element -->
+    <!-- strong is inline element -->
+    <!-- <p class="video-title">
     Talking Tech and AI with <strong>Google CEO</strong> Sundar Pichai!
   </p>
   <p class="video-author">
@@ -100,134 +42,135 @@
     3.4M views &#183; 6 months ago
   </p> -->
 
-  <!-- <div></div> is just a box (container), it is a block element-->
-  <div class="video-grid">
-    <div class="video-preview">
-      <div class="thumbnail-row">
-        <img class="thumbnail"  src="thumbnail/thumbnail-1.webp">
-      </div>
-      <div class="video-info-grid">
-        <div class="channel-pic">
-          <img class="profile-pic" src="channel-pic/channel-1.jpeg">
+    <!-- <div></div> is just a box (container), it is a block element-->
+    <div class="video-grid">
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnail/thumbnail-1.webp">
         </div>
-        <div class="video-info">
-          <p class="video-title">
-            Talking Tech and AI with <strong>Google CEO</strong> Sundar Pichai!
-          </p>
-          <p class="video-author">
-            Marques Brownlee
-          </p>
-          <p class="video-stats">
-            3.4M views &#183; 6 months ago
-          </p>
+        <div class="video-info-grid">
+          <div class="channel-pic">
+            <img class="profile-pic" src="channel-pic/channel-1.jpeg">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              Talking Tech and AI with <strong>Google CEO</strong> Sundar
+              Pichai!
+            </p>
+            <p class="video-author">
+              Marques Brownlee
+            </p>
+            <p class="video-stats">
+              3.4M views &#183; 6 months ago
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnail/thumbnail-2.webp">
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-pic">
+            <img class="profile-pic" src="channel-pic/channel-2.jpeg">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              Try Not To Laugh Challenge #9
+            </p>
+            <p class="video-author">
+              Markiplier
+            </p>
+            <p class="video-stats">
+              19M views &#183; 4 years ago
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnail/thumbnail-3.webp">
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-pic">
+            <img class="profile-pic" src="channel-pic/channel-3.jpeg">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              Crazy Tik Toks Taken Moments Before DISASTER
+            </p>
+            <p class="video-author">
+              SSSniperWolf
+            </p>
+            <p class="video-stats">
+              12M views &#183; 1 year ago
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnail/thumbnail-4.webp">
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-pic">
+            <img class="profile-pic" src="channel-pic/channel-4.jpeg">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              The Simplest Math Problem No One Can Solve - Collatz Conjecture
+            </p>
+            <p class="video-author">
+              Veritasium
+            </p>
+            <p class="video-stats">
+              18M views &#183; 4 months ago
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnail/thumbnail-5.webp">
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-pic">
+            <img class="profile-pic" src="channel-pic/channel-5.jpeg">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              Kadane's Algorithm to Maximum Sum Subarray Problem
+            </p>
+            <p class="video-author">
+              CS Dojo
+            </p>
+            <p class="video-stats">
+              519K views &#183; 5 years ago
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="video-preview">
+        <div class="thumbnail-row">
+          <img class="thumbnail" src="thumbnail/thumbnail-6.webp">
+        </div>
+        <div class="video-info-grid">
+          <div class="channel-pic">
+            <img class="profile-pic" src="channel-pic/channel-6.jpeg">
+          </div>
+          <div class="video-info">
+            <p class="video-title">
+              Anything You Can Fit In The Circle I’ll Pay For
+            </p>
+            <p class="video-author">
+              MrBeast
+            </p>
+            <p class="video-stats">
+              141M views &#183; 1 year ago
+            </p>
+          </div>
         </div>
       </div>
     </div>
-    <div class="video-preview">
-      <div class="thumbnail-row">
-        <img class="thumbnail"  src="thumbnail/thumbnail-2.webp">
-      </div>
-      <div class="video-info-grid">
-        <div class="channel-pic">
-          <img class="profile-pic" src="channel-pic/channel-2.jpeg">
-        </div>
-        <div class="video-info">
-          <p class="video-title">
-            Try Not To Laugh Challenge #9
-          </p>
-          <p class="video-author">
-            Markiplier
-          </p>
-          <p class="video-stats">
-            19M views &#183; 4 years ago
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="video-preview">
-      <div class="thumbnail-row">
-        <img class="thumbnail"  src="thumbnail/thumbnail-3.webp">
-      </div>
-      <div class="video-info-grid">
-        <div class="channel-pic">
-          <img class="profile-pic" src="channel-pic/channel-3.jpeg">
-        </div>
-        <div class="video-info">
-          <p class="video-title">
-            Crazy Tik Toks Taken Moments Before DISASTER
-          </p>
-          <p class="video-author">
-            SSSniperWolf
-          </p>
-          <p class="video-stats">
-            12M views &#183; 1 year ago
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="video-preview">
-      <div class="thumbnail-row">
-        <img class="thumbnail"  src="thumbnail/thumbnail-4.webp">
-      </div>
-      <div class="video-info-grid">
-        <div class="channel-pic">
-          <img class="profile-pic" src="channel-pic/channel-4.jpeg">
-        </div>
-        <div class="video-info">
-          <p class="video-title">
-            The Simplest Math Problem No One Can Solve - Collatz Conjecture
-          </p>
-          <p class="video-author">
-            Veritasium
-          </p>
-          <p class="video-stats">
-            18M views &#183; 4 months ago
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="video-preview">
-      <div class="thumbnail-row">
-        <img class="thumbnail"  src="thumbnail/thumbnail-5.webp">
-      </div>
-      <div class="video-info-grid">
-        <div class="channel-pic">
-          <img class="profile-pic" src="channel-pic/channel-5.jpeg">
-        </div>
-        <div class="video-info">
-          <p class="video-title">
-            Kadane's Algorithm to Maximum Sum Subarray Problem
-          </p>
-          <p class="video-author">
-            CS Dojo
-          </p>
-          <p class="video-stats">
-            519K views &#183; 5 years ago
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="video-preview">
-      <div class="thumbnail-row">
-        <img class="thumbnail"  src="thumbnail/thumbnail-6.webp">
-      </div>
-      <div class="video-info-grid">
-        <div class="channel-pic">
-          <img class="profile-pic" src="channel-pic/channel-6.jpeg">
-        </div>
-        <div class="video-info">
-          <p class="video-title">
-            Anything You Can Fit In The Circle I’ll Pay For
-          </p>
-          <p class="video-author">
-            MrBeast
-          </p>
-          <p class="video-stats">
-            141M views &#183; 1 year ago
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
+  </body>
 </html>
