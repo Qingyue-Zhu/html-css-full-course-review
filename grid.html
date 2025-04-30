@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Practice</title>
+</head>
+<body style="padding-bottom: 1000px;">
+  <div style="
+    display: grid;
+    /* Creates a grid with two 100px-wide columns */
+    /* Unlike inline-blocks, there's no gap between div 1 and div 2 */
+    /* Each div fills its entire column space rather than full line width */
+    /* Grid ensures both divs have equal height - if div 2 grows taller due to content,
+     div 1 automatically matches its height */
+    grid-template-columns: 100px 100px;">
+    <div style="background-color: lightblue;">
+      div 1
+    </div>
+    <div style="background-color: lightpink;">
+      div 2
+      <p>text</p>
+    </div>
+  </div>
+
+  <div style="
+    display: grid;
+    /* Creates a grid with two 100px-wide columns and one 200px-wide column */
+    grid-template-columns: 100px 100px 200px;
+    margin-top: 30px;">
+    <div style="background-color: lightblue;">
+      div 1
+    </div>
+    <div style="background-color: lightpink;">
+      div 2
+      <p>text</p>
+    </div>
+    <div style="background-color: lightblue;">
+      div 3
+    </div>
+    <!-- If there is more element than columns,
+      the new element will be put on the second line -->
+    <div style="background-color: lightpink;">
+      div 4
+    </div>
+  </div>
+
+  <div style="
+    margin-top: 30px;
+    display: grid;
+    /* fr is free space */
+    /* '1fr' means 1 fraction of remaining space 
+    it will take up all available space after the 100px column
+    This creates a flexible layout where the second column automatically expands to fill the container */
+    grid-template-columns: 100px 1fr;">
+    <div style="background-color: lightblue;">
+      div 1
+    </div>
+    <div style="background-color: lightpink;">
+      div 2
+    </div>
+  </div>
+
+  <div style="
+    margin-top: 30px;
+    display: grid;
+    /* The remaining space is divided equally between the two 1fr columns (each gets 50% of available space) */
+    grid-template-columns: 100px 1fr 1fr;">
+    <div style="background-color: lightblue;">
+      div 1
+    </div>
+    <div style="background-color: lightpink;">
+      div 2
+    </div>
+    <div style="background-color: lightblue;">
+      div 3
+    </div>
+  </div>
+
+  <div style="
+    margin-top: 30px;
+    display: grid;
+    /* div 2 gets 1/3 remaining space, div 3 gets 2/3 remaining space */
+    grid-template-columns: 100px 1fr 2fr;">
+    <div style="background-color: lightblue;">
+      div 1
+    </div>
+    <div style="background-color: lightpink;">
+      div 2
+    </div>
+    <div style="background-color: lightblue;">
+      div 3
+    </div>
+  </div>
+
+  <div style="
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* column-gap is space between columns */
+    column-gap: 20px;
+    row-gap: 40px;">
+    <div style="
+    background-color: lightblue;
+    height: 200px;">
+      div 1
+    </div>
+    <div style="
+    background-color: lightpink;
+    height: 200px;">
+      div 2
+    </div>
+    <div style="
+    background-color: lightblue;
+    height: 200pxs;">
+      div 3
+    </div>
+    <div style="
+    background-color: lightpink;
+    height: 200px;">
+      div 4
+    </div>
+    <div style="
+    background-color: lightblue;
+    height: 200pxs;">
+      div 5
+    </div>
+    <div style="
+    background-color: lightpink;
+    height: 200px;">
+      div 6
+    </div>
+  </div>
+</body>
+</html>
