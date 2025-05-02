@@ -1,16 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Position Practice</title>
-  </head>
+<!DOCTYPE html> 
+<html lang="en">   
+  <head>     
+    <meta charset="UTF-8">     
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">     
+    <title>Position Practice</title>   
+  </head>   
   <body style="
     /* The body has a total height of 3000px, creating a scrollable page */
     height: 3000px;
     /* A 60px top padding creates space at the top of the page, 
        preventing content from hiding behind the fixed header */
     padding-top: 60px;
+    /* Added left padding to prevent content from hiding behind the fixed sidebar */
     padding-left: 80px;">
 
     <div style="
@@ -25,21 +26,50 @@
       left: 0px;     
       right: 0px;     
       /* Fixed height of 50px for the header */
-      height: 50px;">
-      header
+      height: 50px;">       
+      header     
     </div>
-
+    
     <div style="
-    background-color: green; 
-    color: white;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    top: 50px;
-    width: 72px;">
+      background-color: green;
+      color: white;
+      /* Fixed position sidebar stays in place when scrolling, similar to the header */
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      top: 50px;
+      width: 72px;">
       sidebar
+      <div style="
+        /* Absolute position within the sidebar (which is a positioned ancestor) */
+        /* This positions the element relative to its closest positioned ancestor (the sidebar) */
+        position: absolute;
+        background-color: red;
+        color: white;
+        right: 0px;
+        top: 0px;">
+        X
+      </div>
     </div>
-
+    
+    <!-- FIXED vs ABSOLUTE POSITIONING EXPLANATION -->
+    <!-- fixed = placed relative to the viewport (browser window), will not move when scrolling -->
+    <!-- absolute = placed relative to nearest positioned ancestor, will move when scrolling unless the ancestor is fixed -->
+    
+    <div style="
+      /* Absolute position removes this element from the normal document flow */
+      /* It's positioned relative to its closest positioned ancestor (in this case, the body) */
+      position: absolute;
+      background-color: red;
+      color: white;
+      right: 10px;
+      top: 60px;
+      /* z-index controls stacking order of elements. Higher values appear in front. */
+      /* Default z-index is auto (effectively 0) */
+      z-index: 1;">
+      absolute
+    </div>
+    
     <div style="     
       background-color: lightblue;     
       width: 200px;     
@@ -47,19 +77,29 @@
       /* Static position is the default position for all elements.
          Elements appear in their normal position in the document flow.
          Top/right/bottom/left properties have no effect on static elements */
-      position: static;">
-      div 1
-    </div>
-
+      position: static;">       
+      div 1     
+    </div>     
+    
     <div style="     
       background-color: lightpink;     
       width: 200px;     
       height: 200px;
-      /* No position specified, so this defaults to static.
-         This element follows the normal document flow,
-         appearing directly below div 1 */
-      ">
+      /* Relative position keeps the element in the normal document flow,
+         but allows it to be offset relative to its normal position.
+         It also becomes a positioned ancestor for absolute elements inside it */
+      position: relative;">       
       div 2
-    </div>
-  </body>
+      <div style="
+        /* This absolute positioned element is positioned relative to its parent div (div 2),
+           because the parent has position: relative, making it a positioned ancestor */
+        position: absolute;
+        background-color: black;
+        color: white;
+        right: 10px;
+        bottom: 10px;">
+        absolute
+      </div>     
+    </div>   
+  </body> 
 </html>
