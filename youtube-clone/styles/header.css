@@ -97,6 +97,7 @@
   border: 0;
   background-color: #fff;
   padding: 0;
+  cursor: pointer;
 }
 
 .right-section button img{
