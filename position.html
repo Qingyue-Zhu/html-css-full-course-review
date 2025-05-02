@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Practice</title>
+  </head>
+  <body style="
+    /* The body has a total height of 3000px, creating a scrollable page */
+    height: 3000px;
+    /* A 60px top padding creates space at the top of the page, 
+       preventing content from hiding behind the fixed header */
+    padding-top: 60px;
+    padding-left: 80px;">
+
+    <div style="
+      /* This creates a black header bar with white text */
+      background-color: black;     
+      color: white;     
+      /* Fixed position keeps this element in the same position relative to the viewport,
+         even when scrolling. This is commonly used for headers and navigation bars */
+      position: fixed;     
+      /* Positioning properties: Sets the distance from the top, left, and right edges of the viewport */
+      top: 0px;     
+      left: 0px;     
+      right: 0px;     
+      /* Fixed height of 50px for the header */
+      height: 50px;">
+      header
+    </div>
+
+    <div style="
+    background-color: green; 
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 50px;
+    width: 72px;">
+      sidebar
+    </div>
+
+    <div style="     
+      background-color: lightblue;     
+      width: 200px;     
+      height: 200px;     
+      /* Static position is the default position for all elements.
+         Elements appear in their normal position in the document flow.
+         Top/right/bottom/left properties have no effect on static elements */
+      position: static;">
+      div 1
+    </div>
+
+    <div style="     
+      background-color: lightpink;     
+      width: 200px;     
+      height: 200px;
+      /* No position specified, so this defaults to static.
+         This element follows the normal document flow,
+         appearing directly below div 1 */
+      ">
+      div 2
+    </div>
+  </body>
+</html>
